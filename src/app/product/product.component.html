@@ -8,9 +8,9 @@
           <ng-template #elseBlock>
             <button class="btn buy-button disabled">Buy</button>
           </ng-template>
-          <button *ngIf="products.isAvailable; else buyer" (click)="addToCart()"class="btn btn-light ml-2"><img src="assets/shopping-cart.svg" height="17px" width="17px">Add to cart</button>
+          <button *ngIf="products.isAvailable; else buyer" class="btn btn-light ml-2"><img src="assets/shopping-cart.svg" height="17px"  width="17px">Add to cart</button>
           <ng-template #buyer>
-            <button class="btn btn-warning ml-2 disabled"><img src="assets/shopping-cart.svg" height="17px" width="17px">Add to cart</button>
+            <button class="btn btn-warning ml-2 disabled" (click)="gotoDetails(products.id)">Product Details</button>
           </ng-template>
         </div>
       </div></div>

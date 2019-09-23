@@ -1,17 +1,18 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
   <img src="assets/shopping.png" width=30px height="30px" alt="">
-  <a class="navbar-brand ml-3" href="#"><h4>BuyIt</h4></a>
+  <a class="navbar-brand ml-3" routerLink=""><h4>BuyIt</h4></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="col-4 search-position" style="margin-left: 44%">
+  <!-- <div class="col-4 search-position" style="margin-left: 44%">
     <input class="form-control form-control-lg justify-content-end" type="text" [(ngModel)]="search" placeholder="Search">
-  </div>
+  </div> -->
   <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Products <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Checkout</a>
+      <a class="nav-item nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="">Products <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" 
+      routerLink="checkout">Checkout</a>
       <!-- <a class="nav-item nav-link" href="#">Pricing</a> -->
       <!-- <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
     </div>

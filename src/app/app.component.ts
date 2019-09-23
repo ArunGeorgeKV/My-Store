@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import {Product} from './Models/Product';
-import { ProductService } from './services/product.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,15 +6,8 @@ import { ProductService } from './services/product.service';
 })
 
 export class AppComponent {
-  products: Product[] = [];
-  constructor(private productService: ProductService) {
-  this.productService.getProducts()
-    .subscribe( (res: Product[]) => {
-      this.products = res;
-      console.log(res);
-    }
 
-    );
-  }
+  constructor() {}
+
   title = 'my-store';
 }
