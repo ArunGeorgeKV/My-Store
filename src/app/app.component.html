@@ -1,12 +1,7 @@
-<app-header>
-</app-header>
+<app-header></app-header>
 <div class="container" id="wrapper">
-    <app-search></app-search>
     <div class="row mt-4">
-      <app-product class="col-4"></app-product>
-      <app-product class="col-4"></app-product>
-      <app-product class="col-4"></app-product>
-      <app-product class="col-4"></app-product>
-
+      <app-product *ngFor="let display of products" class="col-4 " [products]="display"></app-product>
+      <p>{{products|json}}</p>
 </div></div>
 <app-footer></app-footer>
